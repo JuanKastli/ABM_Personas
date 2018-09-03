@@ -28,7 +28,7 @@
        "Tierra del Fuego"}
 
     Dim Id_, IdProvincia_, TipoDocumento_, CodPostal_, NroDocumento_ As Integer
-    Dim Nombre_, Dirección_ As String
+    Dim Nombre_, Direccion_ As String
     Public Property Id() As Integer
         Get
             Return Id_
@@ -48,13 +48,13 @@
             CodPostal_ = value
         End Set
     End Property
-    Public Property Dirección() As String
+    Public Property Direccion() As String
         Get
-            Return Dirección_
+            Return Direccion_
 
         End Get
         Set(ByVal value As String)
-            Dirección_ = value
+            Direccion_ = value
         End Set
     End Property
     Public Property NroDocumento() As Integer

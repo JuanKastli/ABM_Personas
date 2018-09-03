@@ -34,11 +34,12 @@
    
 
     Private Sub Aceptar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Aceptar.Click
-        
-        'MiPersona.Id = CInt(TextBox1.Text)
+        If operacion <> "Agregar" Then
+            MiPersona.Id = CInt(TextBox1.Text)
+        End If
         MiPersona.Nombre = TextBoxNYA.Text
-        MiPersona.Dirección = Dirección.Text
-        MiPersona.CodPostal = CInt(CodigoPostal.Text)
+        MiPersona.Direccion = Direc.Text
+        MiPersona.CodPostal = CodigoPostal.Text
         MiPersona.IdProvincia = ComboBox1.SelectedIndex
         MiPersona.TipoDocumento = ComboBox2.SelectedIndex
         MiPersona.NroDocumento = TextBoxNUMD.Text
@@ -48,7 +49,7 @@
 
             Case "Agregar"
 
-                lst.InsertarPersona(MiPersona)
+                lst.insertarPersona(MiPersona)
 
             Case "Modificar"
 

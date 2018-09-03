@@ -29,7 +29,7 @@ Partial Class PersonasForm
         Me.TipoDocumento = New System.Windows.Forms.Label
         Me.NroDocumento = New System.Windows.Forms.Label
         Me.TextBoxNYA = New System.Windows.Forms.TextBox
-        Me.Dirección = New System.Windows.Forms.TextBox
+        Me.Direc = New System.Windows.Forms.TextBox
         Me.CodigoPostal = New System.Windows.Forms.TextBox
         Me.TextBoxNUMD = New System.Windows.Forms.TextBox
         Me.Aceptar = New System.Windows.Forms.Button
@@ -102,12 +102,12 @@ Partial Class PersonasForm
         Me.TextBoxNYA.Size = New System.Drawing.Size(165, 20)
         Me.TextBoxNYA.TabIndex = 6
         '
-        'Dirección
+        'Direc
         '
-        Me.Dirección.Location = New System.Drawing.Point(246, 108)
-        Me.Dirección.Name = "Dirección"
-        Me.Dirección.Size = New System.Drawing.Size(165, 20)
-        Me.Dirección.TabIndex = 7
+        Me.Direc.Location = New System.Drawing.Point(246, 108)
+        Me.Direc.Name = "Direc"
+        Me.Direc.Size = New System.Drawing.Size(165, 20)
+        Me.Direc.TabIndex = 7
         '
         'CodigoPostal
         '
@@ -164,9 +164,9 @@ Partial Class PersonasForm
         Me.id.AutoSize = True
         Me.id.Location = New System.Drawing.Point(66, 42)
         Me.id.Name = "id"
-        Me.id.Size = New System.Drawing.Size(18, 13)
+        Me.id.Size = New System.Drawing.Size(16, 13)
         Me.id.TabIndex = 16
-        Me.id.Text = "ID"
+        Me.id.Text = "Id"
         '
         'TextBox1
         '
@@ -189,7 +189,7 @@ Partial Class PersonasForm
         Me.Controls.Add(Me.Aceptar)
         Me.Controls.Add(Me.TextBoxNUMD)
         Me.Controls.Add(Me.CodigoPostal)
-        Me.Controls.Add(Me.Dirección)
+        Me.Controls.Add(Me.Direc)
         Me.Controls.Add(Me.TextBoxNYA)
         Me.Controls.Add(Me.NroDocumento)
         Me.Controls.Add(Me.TipoDocumento)
@@ -210,7 +210,7 @@ Partial Class PersonasForm
     Friend WithEvents TipoDocumento As System.Windows.Forms.Label
     Friend WithEvents NroDocumento As System.Windows.Forms.Label
     Friend WithEvents TextBoxNYA As System.Windows.Forms.TextBox
-    Friend WithEvents Dirección As System.Windows.Forms.TextBox
+    Friend WithEvents Direc As System.Windows.Forms.TextBox
     Friend WithEvents CodigoPostal As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxNUMD As System.Windows.Forms.TextBox
     Friend WithEvents Aceptar As System.Windows.Forms.Button

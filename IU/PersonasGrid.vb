@@ -36,12 +36,12 @@
     End Sub
     Private Sub llenarform()
 
-        'PersonasForm.TextBox1.Text = DataGridView1.CurrentRow.Cells("Id").Value.ToString
-        PersonasForm.CodPostal.Text = DataGridView1.CurrentRow.Cells("CodPostal").Value.ToString
-        PersonasForm.Dirección.Text = DataGridView1.CurrentRow.Cells("Dirección").Value.ToString
+        PersonasForm.TextBox1.Text = DataGridView1.CurrentRow.Cells("Id").Value.ToString
+        PersonasForm.CodigoPostal.Text = DataGridView1.CurrentRow.Cells("CodPostal").Value.ToString
+        PersonasForm.Direc.Text = DataGridView1.CurrentRow.Cells("Direccion").Value.ToString
         PersonasForm.TextBoxNUMD.Text = DataGridView1.CurrentRow.Cells("NroDocumento").Value.ToString
         PersonasForm.ComboBox1.Text = DataGridView1.CurrentRow.Cells("TipoDocumento").Value.ToString
-        PersonasForm.TextBoxNYA.Text = DataGridView1.CurrentRow.Cells("NYA").Value.ToString
+        PersonasForm.TextBoxNYA.Text = DataGridView1.CurrentRow.Cells("Nombre").Value.ToString
         PersonasForm.ComboBox2.Text = DataGridView1.CurrentRow.Cells("nombreProvincia").Value.ToString
 
 

@@ -24,7 +24,7 @@ Public Class PersonasCollection
 
             MiPersona.id = CInt(dr("Id"))
             MiPersona.Nombre = dr("Nombre")
-            MiPersona.Dirección = dr("Dirección")
+            MiPersona.Direccion = dr("Direccion")
             MiPersona.CodPostal = dr("CodPostal")
             MiPersona.IdProvincia = CInt(dr("IdProvincia"))
             MiPersona.TipoDocumento = CInt(dr("TipoDocumento"))
@@ -35,32 +35,35 @@ Public Class PersonasCollection
         Next
         Return Me
     End Function
-    Public Sub InsertarPersona(ByVal MiPersona As PersonasClass)
+    Public Sub insertarPersona(ByVal Mipersona As PersonasClass)
 
-        Dim objBaseDatos As New BaseDeDatosClass
-        objBaseDatos.objTabla = "Personas"
-        Dim vsql As New StringBuilder
-        'vsql.Append("(Id)")
-        vsql.Append(",Nombre")
-        vsql.Append(",Dirección")
-        vsql.Append(",CodPostal")
-        vsql.Append(",IdProvincia")
-        vsql.Append(",TipoDocumento")
-        vsql.Append(",NroDocumento)")
+        Dim ObjBasedato As New BaseDeDatosClass
 
-        vsql.Append("VALUES")
+        ObjBasedato.objTabla = "Personas"
 
-        'vsql.Append("('" & MiPersona.id & "'")
-        vsql.Append("," & MiPersona.Nombre & "'")
-        vsql.Append("," & MiPersona.Dirección & "'")
-        vsql.Append("," & MiPersona.CodPostal & "'")
-        vsql.Append("," & MiPersona.IdProvincia & "'")
-        vsql.Append("," & MiPersona.TipoDocumento & "'")
-        vsql.Append("," & MiPersona.NroDocumento & "'")
+        Dim VSQL As New StringBuilder
 
-        MiPersona.id = objBaseDatos.Insertar(vsql.ToString)
+        'VSQL.Append("(Id")
+        VSQL.Append("(Nombre")
+        VSQL.Append(",Direccion")
+        VSQL.Append(",CodPostal")
+        VSQL.Append(",IdProvincia")
+        VSQL.Append(",TipoDocumento")
+        VSQL.Append(",NroDocumento)")
 
-        Me.Add(MiPersona)
+        VSQL.Append(" VALUES ")
+
+        'VSQL.Append("('" & Mipersona.Id.ToString & "'")
+        VSQL.Append("( '" & Mipersona.Nombre & "'")
+        VSQL.Append(", '" & Mipersona.Direccion & "'")
+        VSQL.Append(", '" & Mipersona.CodPostal & "'")
+        VSQL.Append(", '" & Mipersona.IdProvincia & "'")
+        VSQL.Append(", '" & Mipersona.TipoDocumento & "'")
+        VSQL.Append(", '" & Mipersona.NroDocumento & "')")
+
+        Mipersona.Id = ObjBasedato.Insertar(VSQL.ToString)
+        Me.Add(Mipersona)
+
 
     End Sub
     Protected Overrides ReadOnly Property SupportsSearchingCore() As Boolean
@@ -84,7 +87,7 @@ Public Class PersonasCollection
 
         'Instancio el el Objeto BaseDatosClass para acceder al la base personas.
         Dim objBaseDatos As New BaseDeDatosClass
-        objBaseDatos.objTabla = "personas"
+        objBaseDatos.objTabla = "Personas"
 
         'Ejecuta el método base eliminar.
         Dim resultado As Boolean
@@ -109,16 +112,16 @@ Public Class PersonasCollection
 
         'Instancio el el Objeto BaseDatosClass para acceder al la base personas.
         Dim objBaseDatos As New BaseDeDatosClass
-        objBaseDatos.objTabla = "personas"
+        objBaseDatos.objTabla = "Personas"
 
         Dim vSQL As New StringBuilder
         Dim vResultado As Boolean = False
 
-        vSQL.Append("Id='" & MiPersona.Id.ToString & "'")
-        vSQL.Append(",TipoDocumento='" & MiPersona.tipoDocumento & "'")
-        vSQL.Append(",NumeroDocumento='" & MiPersona.NroDocumento.ToString & "'")
+        'vSQL.Append("Id='" & MiPersona.Id.ToString & "'")
+        vSQL.Append("TipoDocumento='" & MiPersona.TipoDocumento & "'")
+        vSQL.Append(",NroDocumento='" & MiPersona.NroDocumento.ToString & "'")
         vSQL.Append(",Nombre='" & MiPersona.Nombre & "'")
-        vSQL.Append(",Direccion='" & MiPersona.Dirección & "'")
+        vSQL.Append(",Direccion='" & MiPersona.Direccion & "'")
         vSQL.Append(",IdProvincia='" & MiPersona.IdProvincia.ToString & "'")
         vSQL.Append(",CodPostal='" & MiPersona.CodPostal.ToString & "'")
 
